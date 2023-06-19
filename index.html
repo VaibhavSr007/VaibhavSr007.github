@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS..</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"> 
+    <title> VS</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">  
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet"
-     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body >
     <!-- header section -->
     <header>
-        <a href="#" class="logo">Vaibh<span>a</span>v..</a>
+        <a href="#" class="logo">Vaibh<span>a</span>v</a>
 
         <ul class="navlist">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Expertise</a></li>
+            <li><a href="#portfolio">Project</a></li>
             <li><a href="#contact">Contact Me</a></li>
+            <li><button style="cursor: pointer; padding: 3px;" id="mode-toggle">Toggle Mode</button></li>
         </ul>
 
         <div class="bx-menu bx" id="menu-icon">
@@ -33,7 +32,6 @@
     </header>
 
     <!-- home section -->
-
     <section class="home" id="home">
         <div class="home-text">
             <div class="slide">
@@ -42,13 +40,16 @@
             </div>
             <h1>Vaibhav</h1>
             <h3>Web<span> Developer.</span></h3>
-            <p>Zealous prefinal year engineeing graduate with hunger to learn <br> 
-            technologies and make an impact to create a better tommorow.</p>
+            <p>Zealous prefinal year engineering graduate with the hunger to learn <br> 
+            technologies and make an impact to create a better tomorrow.</p>
             <div class="button">
                 <a href="resume.html" class="btn">Download CV</a>
                 <a href="#portfolio" class="btn2"><span><i class="bx bx-play"></i></span>Watch My Work</a>
             </div>
         </div>
+        <!-- <div class="home-img"> -->
+            <img class="noinv" width="500" height="500" src="./img/ARTWORK.png" alt="">
+        <!-- </div> -->
     </section>
 
     <!-- Aboout section -->
@@ -59,7 +60,8 @@
         <div class="about-text">
             <h2>About <span>Me</span></h2>
             <h4>Ardent Problem Solver <span>&&</span> Web Developer</h4>
-            <p>Experienced problem solver with a strong analytical background and expertise in frontend and backend development using a variety of technologies. AWS certified cloud practitioner, capable of building scalable web applications and managing cloud solutions. Over 650 problem-solving achievements on LeetCode, with a contest rating of 1650+.</p>
+            <p>
+                Experienced problem solver with a strong analytical background and expertise in frontend and backend development using a variety of technologies. AWS certified cloud practitioner, capable of building scalable web applications and managing cloud solutions. Over 650 problem-solving achievements on LeetCode, with a contest rating of 1650+.</p>
 
             <div class="tab-titles">
                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -104,8 +106,7 @@
     <!-- Services section -->
     <section class="services" id="services">
         <div class="main-text">
-            <p>What I am Expert At</p>
-            <h2><span>My </span>Services</h2>
+            <h2><span>My </span>Expertise</h2>
         </div>
 
         <div class="services-content">
@@ -152,7 +153,7 @@
                 <img src="/img/dd1.png" alt="">
                 <div class="layer">
                     <h5>Defence Dreamers</h5>
-                    <p>A dyanamic Study Website for preparation of Defence Exams.</p>
+                    <p>A dynamic Study Website for preparation of Defence Exams.</p>
                     <a href="https://github.com/VaibhavSr007/Defence-Dreamers.github.io"><i class="bx bx-link-external"></i></a>
                 </div>
             </div>
@@ -208,8 +209,8 @@
     <section class="contact" id="contact">
         <div class="contact-text">
             <h2>Contact <span>Me!</span></h2>
-            <h4>If My Work Intrigues You</h4>
-            <p>Feel free to connect.</p>
+            <h4></h4>
+            
             <div class="list">
                 <li><a href="">+91 9628695212</a></li>
                 <li><a href="">vaibhavasrivastava907@gmail.com</a></li>
@@ -224,7 +225,8 @@
         </div>
 
         <div class="contact-form">
-            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="vaibhavsr007" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/vaibhavsr007?trk=profile-badge"></a></div>
+            <div id="noinv" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="vaibhavsr007" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/vaibhavsr007?trk=profile-badge"></a></div>
+              
         </div>
     </section>
 
@@ -238,7 +240,7 @@
             <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
         </div>
     </section>
-
+    
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -255,7 +257,23 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-
+        
+        // Add event listener to handle the toggle button click
+        
+        var isLight = false;
+        var all = document.querySelector("*");
+        const handleClick = () => {
+            isLight = !isLight;
+            console.log(isLight);
+            if(isLight){
+                all.classList.add("dark-light");
+            }
+            else{
+                all.classList.remove("dark-light");
+            }
+        } 
+        const modeToggle = document.getElementById('mode-toggle');
+        modeToggle.addEventListener('click', handleClick);
     </script>
     <script src="js/script.js"></script>
 </body>
