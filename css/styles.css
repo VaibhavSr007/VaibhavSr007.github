@@ -749,3 +749,7 @@ header.sticky{
     float: right;
     z-index: 1000;
 }
+
+.toggle-btn:hover{
+    background-color: #fc5400;
+}
