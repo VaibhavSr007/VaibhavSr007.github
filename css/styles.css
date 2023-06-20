@@ -211,7 +211,7 @@ section{
 header.sticky{
     background: var(--bg-color);
     border-bottom: 1px solid #ffffff1a;
-    padding: 12px /* 15% */;
+    padding: 12px  15% ;
 }
 
 .about{
@@ -603,6 +603,128 @@ header.sticky{
     background: var(--main-color);
 }
 
+
+/* css for responsiveness */
+
+@media(max-width: 1480px){
+    header{
+        padding: 10px 8%;
+        transition: .6s;
+    }
+    header.sticky{
+        padding: 10px 2.5%;
+        transition: .3s;
+    }
+    section{
+        padding: 110px 8% 60px;
+    }
+    .end{
+        padding: 15px 3%;
+    }
+}
+
+@media(max-width: 1100px){
+    :root{
+        --big-font: 4rem;
+        --h2-font: 2.5rem;
+        --p-font: 1rem;
+        transition:  .1s;
+    }
+    .home-text h3{
+        font-size: 2.5rem;
+    }
+    .home{
+        height: 87vh;
+    }
+}
+
+@media(max-width: 920px){
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about-img{
+        text-align: center;
+        order: 1;
+    }
+    .about-img img{
+        width: 80%;
+        height: auto;
+        max-width: 80%;
+    }
+    
+    .contact{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 410px){
+        .about-text .button{
+            display: flex;
+            justify-content: left;
+        }
+        .about-text .about-about{
+            display: none;
+        }
+        .about-img{
+            width: 350px;
+        }
+}
+
+@media(max-width: 1050px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: -1000%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        transition: all .45s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--text-color);
+    }
+    .navlist button{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+    }
+    .navlist a:hover{
+        color: var(--main-color);
+    }
+    .navlist button:hover{
+        color: var(--main-color);
+    }
+    .navlist a:active{
+        color: var(--text-color);
+    }
+    .navlist.open{
+        top: 100%;
+    }
+
+    .home-img img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media(max-width: 720px){
+    .home-img img{
+        display: none;
+    }
+}
+
+
+/* css for toggling modes */
 .dark-light {
     filter: invert(100%);
   }
@@ -613,4 +735,17 @@ header.sticky{
 
 .dark-light .noinv{
     filter: invert(0%) !important;
+}
+
+.toggle-btn{
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: medium;
+    width: 120px;
+    height: 50px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    float: right;
+    z-index: 1000;
 }

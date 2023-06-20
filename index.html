@@ -13,22 +13,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body >
+    <button class="toggle-btn" style="cursor: pointer; padding: 3px; position: fixed; bottom: 100px; right: 100px;" id="mode-toggle">Toggle Mode</button>
     <!-- header section -->
     <header>
         <a href="#" class="logo">Vaibh<span>a</span>v</a>
-
+        
         <ul class="navlist">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#services">Expertise</a></li>
             <li><a href="#portfolio">Project</a></li>
             <li><a href="#contact">Contact Me</a></li>
-            <li><button style="cursor: pointer; padding: 3px;" id="mode-toggle">Toggle Mode</button></li>
         </ul>
 
-        <div class="bx-menu bx" id="menu-icon">
-
-        </div>
+        <div class="bx-menu bx" id="menu-icon"></div>
     </header>
 
     <!-- home section -->
@@ -40,16 +38,16 @@
             </div>
             <h1>Vaibhav</h1>
             <h3>Web<span> Developer.</span></h3>
-            <p>Zealous prefinal year engineering graduate with the hunger to learn <br> 
-            technologies and make an impact to create a better tomorrow.</p>
+            <p>Zealous prefinal year engineeing graduate with hunger to learn <br> 
+            technologies and make an impact to create a better tommorow.</p>
             <div class="button">
                 <a href="resume.html" class="btn">Download CV</a>
                 <a href="#portfolio" class="btn2"><span><i class="bx bx-play"></i></span>Watch My Work</a>
             </div>
         </div>
-        <!-- <div class="home-img"> -->
-            <img class="noinv" width="500" height="500" src="./img/ARTWORK.png" alt="">
-        <!-- </div> -->
+        <div class="home-img">
+            <img class="noinv" style="z-index: 90;" width="500" height="500" src="./img/ARTWORK.png" alt="">
+        </div>
     </section>
 
     <!-- Aboout section -->
@@ -60,7 +58,7 @@
         <div class="about-text">
             <h2>About <span>Me</span></h2>
             <h4>Ardent Problem Solver <span>&&</span> Web Developer</h4>
-            <p>
+            <p class="about-about">
                 Experienced problem solver with a strong analytical background and expertise in frontend and backend development using a variety of technologies. AWS certified cloud practitioner, capable of building scalable web applications and managing cloud solutions. Over 650 problem-solving achievements on LeetCode, with a contest rating of 1650+.</p>
 
             <div class="tab-titles">
@@ -82,7 +80,7 @@
 
             <div class="tab-contents" id="certifications">
                 <ul>
-                    <li><span style="font-size: 20px;" >Amazon Web Services</span><br><div style="font-size: 15px;">AWS Certified Cloud Practitioner</div></li>
+                    <li><span style="font-size: 20px;">Amazon Web Services</span><br><div style="font-size: 15px;">AWS Certified Cloud Practitioner</div></li>
                     <li><span style="font-size: 20px;">Amazon Web Services</span><br><div style="font-size: 15px;"> AWS Cloud Practitioner Essentials</div></li> 
                     <li><span style="font-size: 20px;">Amazon Web Services</span><br><div style="font-size: 15px;"> AWS Certified Solutions Architect (In progress) </div></li>
                 </ul>
@@ -153,7 +151,7 @@
                 <img src="/img/dd1.png" alt="">
                 <div class="layer">
                     <h5>Defence Dreamers</h5>
-                    <p>A dynamic Study Website for preparation of Defence Exams.</p>
+                    <p>A dyanamic Study Website for preparation of Defence Exams.</p>
                     <a href="https://github.com/VaibhavSr007/Defence-Dreamers.github.io"><i class="bx bx-link-external"></i></a>
                 </div>
             </div>
@@ -257,6 +255,8 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+
         
         // Add event listener to handle the toggle button click
         
